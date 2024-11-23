@@ -1,27 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/gradient_container.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.cyan, Colors.blue],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'ASIMOV JR.',
-              style: TextStyle(
-                color: Color.fromARGB(255, 233, 231, 231),
-                fontSize: 42,
-              ),
-            ),
-          ),
-        ),
+        body: GradientContainer(
+            [Color.fromARGB(255, 0, 34, 89), Color.fromARGB(255, 15, 23, 42)]),
       ),
     ),
   );
